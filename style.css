@@ -19,7 +19,7 @@ a{
     --basecolor: #dfd9d9;
     --smooth-color: #B1B1B1;
     --font-body: 100 1rem 'Montserrat', sans-serif;
-    --font-title: 600 3rem 'Anton', sans-serif;
+    --font-title: 100 3rem 'Anton', sans-serif;
     --font-card: 100 1rem 'Bebas Neue', sans-serif;
 }
 /* fazendo o scroll ficar suave */
@@ -56,7 +56,7 @@ header {
     text-align: center;
 }
 .code img {
-    width: 15%;
+    width: 10%;
     height: auto;
     
 }
@@ -65,7 +65,7 @@ header {
     font: var(--font-title );
   }
   img {
-    width: 40%;
+    width: 30%;
     height: auto;
   
   }
@@ -74,9 +74,10 @@ header {
     padding-bottom: 0.5rem;
     
   }
-  .image-wrap{
+  /*.image-wrap{
   filter:drop-shadow(0px 0px 12px rgba(0,0,0, 0.1));
   }
+  */
   .image img{
   
     position: relative;
@@ -85,9 +86,13 @@ header {
     
   
   }
+  .profile div {
+    display: flexbox;
+    flex-direction: row;
+  }
   
   .title h1 {
-    font-size: 2.06rem;
+    font-size: 64px;
     font: var(--font-title);
     text-align: center;
     padding-bottom: 0.20rem;
@@ -95,7 +100,7 @@ header {
   }
   .title p{
     color: var(--secondary-color);
-    font-size: 1.31rem;
+    font-size: 32px;
     -webkit-font-smoothing: antialiased;
   
   }
@@ -104,3 +109,15 @@ header {
     color: var(--secondary-color);
     text-align: center;
   }
+
+  .titulo {
+    
+    width: 291px;
+    height: 68.07px;
+    left: 646px;
+    top: 334px;
+    background-color: var(--principal-color);
+    border-radius: 26px;
+    
+  }
+  
