@@ -35,7 +35,6 @@
         </nav>
     </header>
     <!-- coisas principais-->
-    <main>
         <div class="profile">
 
             <img class="image" src="assets/profilepic.png" alt="Foto de perfil">
@@ -44,10 +43,59 @@
                 <span class="titulo">
                     <p>Quem sou eu?</p>
                 </span>
+                <p>Olá, Mundo! <br> <br>Me chamo Vitória Ferreira, <br>
+                tenho 21 anos e sou do interior de Minas Gerais.  <br>
+                <br>Apaixonada por música, games e tecnologia. </p>
             </div>
         </div>
-    </main>
 
+        <div id="card-scroll"> 
+        <span id="leituras">
+            <div class="titulo-card">
+                <p>Leituras</p>
+            </div>
+            <div class="cards">
+                
+                <div class="conteudo">
+                    
+                </div>
+            </div>
+        </span>
+
+        <span id="hobbies">
+        <div class="titulo-card">
+            <p>Hobbies</p>
+        </div>
+        <div class="cards">
+            
+            <div class="conteudo">
+                
+            </div>
+        </div>
+        </span>
+
+        <span id="curiosidades">
+            <div class="titulo-card">
+                <p>Curiosidades</p>
+            </div>
+            <div class="cards">
+                
+                <div class="conteudo">
+                    
+                </div>
+            </div>
+        </span>
+        </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".conteudo"),{
+            max: 5,
+            speed: 300,
+        glare: true,
+        "max-glare": 0.1,
+	    });
+  </script>
 </body>
+
 
 </html>
