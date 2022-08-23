@@ -8,9 +8,12 @@
 /* tirando a formatacao da tag a (links) */
 a {
   text-decoration: none;
+  color: var(--secondary-color);
 }
 
-
+a:hover {
+  transform: scale(1.1);
+}
 
 /* formatacao da raiz da pagina*/
 :root {
@@ -31,34 +34,27 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.anima {
+  max-width: 0;
+  overflow: hidden;
   font: var(--font-title);
   color: var(--secondary-color);
-  /*
-  max-width: 0;
-  animation: write normal 5s;
-  */
-
-}
-
-h1 span {
-  color: var(--principal-color);
-  /*
+  
   border-right: 4px solid var(--basecolor);
   padding-right: 3px;
-  animation: glow normal infinite .8s;
-  */
+  animation: glow normal infinite .8s,write normal 9s steps(55) both;
 }
 
-/*
-h1:hover{
+.anima span {
   color: var(--principal-color);
+
 }
 
-h1 span:hover{
-  color: var(--secondary-color);
-}
-*/
 .bloco {
   background-color: var(--terciary-color);
   padding: 1rem;
@@ -71,7 +67,7 @@ h1 span:hover{
 
 header {
   padding: 1rem;
-  margin: 0 1rem;
+  margin: 0.1rem;
   position: flex;
 }
 
@@ -95,6 +91,24 @@ header {
   text-align: center;
   font: var(--font-title);
 }
+
+/*
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;;
+  transition: 0.2s;
+  font-size: 1.4rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.icons a:hover {
+  transform: scale(1.1);
+  background: none;
+  color: #FFFFFF;
+}
+*/
 
 #glass {
   display: flex;
@@ -201,21 +215,6 @@ header {
   color: #FFFFFF;
 }
 
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  transition: 0.2s;
-  font-size: 1.4rem;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.icons a:hover {
-  transform: translateY(-5px);
-  background: none;
-  color: #FFFFFF;
-}
 
 .banner-curiosidades {
 
@@ -263,8 +262,80 @@ header {
   text-align: left;
 }
 
+.instagram {
+  background-color: var(--terciary-color);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instagram h1 {
+  font: var(--font-title);
+  color: var(--secondary-color);
+}
+.insta {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  font-size: 50px;
+  padding: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.icons a:hover{
+ transform: translateY(-5px); 
+ background: none;
+ color: #FFFFFF;
+}
+
+.banner-bandas {
+
+  margin-top: 60px;
+  width: auto;
+  height: 300px;
+
+  display: flex;
+
+}
+
+.banner-bandas h1 {
+  font: var(--font-title);
+  color: var(--secondary-color);
+  padding: 20px;
+}
+
+.banner-bandas div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.banner-bandas img {
+  height: 200px;
+  width: auto;
+  padding: 10px;
+
+}
+
+.banner-bandas img:hover {
+  transform: scale(1.1);
+  transform: translateY(1.1);
+}
+
 .banner-series {
 
+  background-color: var(--principal-color);
   margin-top: 60px;
   width: auto;
   height: 300px;
@@ -299,7 +370,6 @@ header {
 }
 
 .banner-leituras {
-  background-color: var(--principal-color);
   margin-top: 60px;
   width: auto;
   height: 300px;
@@ -330,42 +400,39 @@ header {
   transform: translateY(1.1);
 }
 
-/*
-.banner p {
-  padding-top: 100px;
-  padding-left: 50px;
-  background-color: var(--terciary-color);
-  font: var(--font-body);
-  color:  #17181F;
-  text-align: left;
-} */
-
-/*.card-scroll {
+.footer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  align-self: center;
-
-}
-*/
-
-
-#leituras {
-  margin-bottom: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
 }
 
-#hobbies {
-  margin-bottom: 100px;
+.footer h1 {
+  font: var(--font-title);
+  color: var(--secondary-color);
 }
 
-#curiosidades {
-  margin-bottom: 300px;
+.footer p {
+  font: var(--font-body);
+  color: var(--secondary-color);
+  padding-bottom: 20px;
+}
+
+.form .button {
+  background-color: var(--principal-color);
+  font: var(--font-card);
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.form input{
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  
 }
 
 
-
-/* @keyframes glow {
+@keyframes glow {
   100%{
     border-right-color: transparent;
   }
@@ -376,9 +443,9 @@ header {
     max-width: 100%;
   }
 }
-*/
 
-@media only screen and (max-device-width: 900px) {
+/*
+@media (min-width:350px) {
   .banner-curiosidades {
 
 
@@ -491,7 +558,7 @@ header {
   }
 }
 
-@media only screen and (max-device-width: 500px) {
+@media (min-width: 994px) {
   .banner-curiosidades {
 
 
@@ -714,3 +781,4 @@ header {
 
   
 }
+*/
