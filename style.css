@@ -39,15 +39,16 @@ html {
   flex-direction: column;
   align-items: center;
 }
+
 .anima {
   max-width: 0;
   overflow: hidden;
   font: var(--font-title);
   color: var(--secondary-color);
-  
+
   border-right: 4px solid var(--basecolor);
   padding-right: 3px;
-  animation: glow normal infinite .8s,write normal 9s steps(55) both;
+  animation: glow normal infinite .8s, write normal 9s steps(55) both;
 }
 
 .anima span {
@@ -58,6 +59,16 @@ html {
 .bloco {
   background-color: var(--terciary-color);
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bloco a {
+  font: var(--font-title);
+  padding: 10px;
+  font-size: 20px;
 }
 
 .container {
@@ -77,7 +88,7 @@ header {
 }
 
 .code img {
-  width: 10%;
+  width: 5%;
   height: auto;
 
 }
@@ -91,24 +102,6 @@ header {
   text-align: center;
   font: var(--font-title);
 }
-
-/*
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;;
-  transition: 0.2s;
-  font-size: 1.4rem;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.icons a:hover {
-  transform: scale(1.1);
-  background: none;
-  color: #FFFFFF;
-}
-*/
 
 #glass {
   display: flex;
@@ -251,6 +244,7 @@ header {
   justify-content: center;
 
 }
+
 .banner-curiosidades ul {
   padding: 20px;
 }
@@ -263,16 +257,18 @@ header {
 }
 
 .instagram {
-  background-color: var(--terciary-color);
+  
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .instagram h1 {
   font: var(--font-title);
   color: var(--secondary-color);
 }
+
 .insta {
 
   display: flex;
@@ -283,7 +279,7 @@ header {
   height: 600px;
 }
 
-.icons{
+.icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,14 +288,16 @@ header {
   padding: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.icons a:hover{
- transform: translateY(-5px); 
- background: none;
- color: #FFFFFF;
+
+.icons a:hover {
+  transform: translateY(-5px);
+  background: none;
+  color: #FFFFFF;
 }
 
 .banner-bandas {
 
+  background-color: var(--principal-color);
   margin-top: 60px;
   width: auto;
   height: 300px;
@@ -333,9 +331,45 @@ header {
   transform: translateY(1.1);
 }
 
+.banner-jogos {
+
+  margin-top: 60px;
+  width: auto;
+  height: 300px;
+
+  display: flex;
+
+}
+
+.banner-jogos h1 {
+  font: var(--font-title);
+  color: var(--secondary-color);
+  padding: 20px;
+}
+
+.banner-jogos div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.banner-jogos img {
+  height: 200px;
+  width: auto;
+  padding: 10px;
+
+}
+
+.banner-jogos img:hover {
+  transform: scale(1.1);
+  transform: translateY(1.1);
+}
+
+
 .banner-series {
 
-  background-color: var(--principal-color);
+ 
   margin-top: 60px;
   width: auto;
   height: 300px;
@@ -370,12 +404,14 @@ header {
 }
 
 .banner-leituras {
+  background-color: var(--terciary-color);
   margin-top: 60px;
   width: auto;
   height: 300px;
 
   display: flex;
 }
+
 .banner-leituras h1 {
   font: var(--font-title);
   color: var(--secondary-color);
@@ -395,6 +431,7 @@ header {
   padding: 10px;
 
 }
+
 .banner-leituras img:hover {
   transform: scale(1.1);
   transform: translateY(1.1);
@@ -424,16 +461,26 @@ header {
   font-size: 20px;
   color: var(--secondary-color);
 }
-.form input{
+
+.form input {
   height: 50px;
   width: 200px;
   border-radius: 5px;
-  
+
 }
 
+.banner-curiosidades,
+.banner-bandas,
+.banner-series,
+.banner-leituras,
+.instagram,
+.footer 
+.banner-jogos{
+  visibility: hidden;
+}
 
 @keyframes glow {
-  100%{
+  100% {
     border-right-color: transparent;
   }
 }
@@ -444,341 +491,3 @@ header {
   }
 }
 
-/*
-@media (min-width:350px) {
-  .banner-curiosidades {
-
-
-    background-color: var(--terciary-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-    padding-bottom: 40px ;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-curiosidades h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .banner-curiosidades img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    margin-left: 300px;
-    margin-top: 25px;
-  }
-  
-  .banner-curiosidades div {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .banner-curiosidades ul li {
-    font: var(--font-card);
-    font-size: 30px;
-    color: var(--secondary-color);
-    text-align: left;
-  }
-  
-  .banner-series {
-  
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-series h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-series div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-series img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  
-  .banner-series img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }
-  
-  .banner-leituras {
-    background-color: var(--principal-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-  
-    display: flex;
-    flex-direction: column;
-  }
-  .banner-leituras h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-leituras div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-leituras img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  .banner-leituras img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }
-}
-
-@media (min-width: 994px) {
-  .banner-curiosidades {
-
-
-    background-color: var(--terciary-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-    padding-bottom: 40px ;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-curiosidades h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .banner-curiosidades img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    margin-left: 300px;
-    margin-top: 25px;
-  }
-  
-  .banner-curiosidades div {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .banner-curiosidades ul li {
-    font: var(--font-card);
-    font-size: 30px;
-    color: var(--secondary-color);
-    text-align: left;
-  }
-  
-  .banner-series {
-  
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-series h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-series div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-series img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  
-  .banner-series img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }
-  
-  .banner-leituras {
-    background-color: var(--principal-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-  
-    display: flex;
-    flex-direction: column;
-  }
-  .banner-leituras h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-leituras div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-leituras img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  .banner-leituras img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }.banner-curiosidades {
-
-
-    background-color: var(--terciary-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-    padding-bottom: 40px ;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-curiosidades h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .banner-curiosidades img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    margin-left: 300px;
-    margin-top: 25px;
-  }
-  
-  .banner-curiosidades div {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .banner-curiosidades ul li {
-    font: var(--font-card);
-    font-size: 30px;
-    color: var(--secondary-color);
-    text-align: left;
-  }
-  
-  .banner-series {
-  
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .banner-series h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-series div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-series img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  
-  .banner-series img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }
-  
-  .banner-leituras {
-    background-color: var(--principal-color);
-    margin-top: 60px;
-    width: auto;
-    height: auto;
-  
-    display: flex;
-    flex-direction: column;
-  }
-  .banner-leituras h1 {
-    font: var(--font-title);
-    color: var(--secondary-color);
-    text-align: center;
-  }
-  
-  .banner-leituras div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .banner-leituras img {
-    height: 300px;
-    width: auto;
-    padding: 10px;
-  
-  }
-  .banner-leituras img:hover {
-    transform: scale(1.1);
-    transform: translateY(1.1);
-  }
-
-  
-}
-*/
